@@ -12,4 +12,4 @@ export function Routes() {
             {user? <AppRoutes /> : <AuthRoutes /> }
         </BrowserRouter>
     )
-}
+};

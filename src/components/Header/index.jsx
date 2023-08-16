@@ -33,4 +33,4 @@ export function Header() {
             </Logout>
         </Container>
     );
-}
+};

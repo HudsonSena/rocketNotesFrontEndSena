@@ -14,4 +14,4 @@ export function AppRoutes() {
             <Route path="/details/:id" element={ <Details /> }/>
         </Routes>
     )
-}
+};
