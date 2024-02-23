@@ -17,23 +17,19 @@ export function SignUp(){
     function handleSingUp() {
         if(!name || !email || !password) {
             alert("Preencha todos os campos!");
-        }
-
-        if(name == '' || email == '' || password == '') {
-            alert("Campos inválidos");
-        }
-
-        api.post("/users", { name, email, password }).then(() => {
-            alert("Usuário cadastrado com sucesso!");
-            navigate("/");
-            
-        }).catch(error => {
-            if(error.response) {
-                alert(error.response.data.message);
-            } else {
-                alert("Não foi possível cadastrar");
-            }
-        })
+        } else {
+            api.post("/users", { name, email, password }).then(() => {
+                alert("Usuário cadastrado com sucesso!");
+                navigate("/");
+                
+            }).catch(error => {
+                if(error.response) {
+                    alert(error.response.data.message);
+                } else {
+                    alert("Não foi possível cadastrar");
+                }
+            })
+        }        
     }
     return (
         <Container>
