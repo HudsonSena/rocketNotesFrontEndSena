@@ -31,8 +31,6 @@ export function SignIn(){
                     onChange={e => setEmail(e.target.value)}
                 />
 
-                <p>E-mail: hudson@gmail.com</p>
-
                 <Input
                     placeholder="Senha"
                     type="password"
@@ -40,7 +38,10 @@ export function SignIn(){
                     onChange={e => setPassword(e.target.value)}
                 />
 
-                <p>Senha: 123h</p>
+                <p> Utilize
+                    <br />E-mail: hudson@gmail.com
+                    <br />Senha: 123h
+                </p>
 
                 <Button title="Entrar" onClick={handleSignIn} />
 
