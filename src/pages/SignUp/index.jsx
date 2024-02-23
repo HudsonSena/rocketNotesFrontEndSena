@@ -19,6 +19,10 @@ export function SignUp(){
             alert("Preencha todos os campos!");
         }
 
+        if(name == '' || email == '' || password == '') {
+            alert("Campos inválidos");
+        }
+
         api.post("/users", { name, email, password }).then(() => {
             alert("Usuário cadastrado com sucesso!");
             navigate("/");
