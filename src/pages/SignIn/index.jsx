@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Container, Form, Background } from './styles.js';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Input } from "../../components/Input";
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/auth';
 
-export function SignIn(){
+export function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -31,6 +31,10 @@ export function SignIn(){
                     onChange={e => setEmail(e.target.value)}
                 />
 
+                <p>
+                    User: hudson@gmail.com
+                </p>
+
                 <Input
                     placeholder="Senha"
                     type="password"
@@ -38,9 +42,8 @@ export function SignIn(){
                     onChange={e => setPassword(e.target.value)}
                 />
 
-                <p> Utilize
-                    <br />E-mail: hudson@gmail.com
-                    <br />Senha: 123h
+                <p>
+                    Password: 123h
                 </p>
 
                 <Button title="Entrar" onClick={handleSignIn} />
@@ -50,6 +53,6 @@ export function SignIn(){
 
             <Background />
 
-        </Container>        
+        </Container>
     );
 }
